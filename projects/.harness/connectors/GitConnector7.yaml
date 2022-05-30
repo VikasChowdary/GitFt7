@@ -1,0 +1,24 @@
+connector:
+  name: GitConnector7
+  identifier: GitConnector7
+  description:
+  orgIdentifier: default
+  projectIdentifier: GitFt7
+  type: Github
+  spec:
+    url: https://github.com/VikasChowdary/GitFt7
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: Vikas
+          tokenRef: account.patForGithub
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: account.patForGithub
+    delegateSelectors:
+    - acctgroup
+    executeOnDelegate: true
+    type: Repo
